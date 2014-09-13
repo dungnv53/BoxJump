@@ -10,15 +10,13 @@
 	<link rel="stylesheet" href="Box_Jump_files/style.css">
 	<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
 
-  <script src="Box_Jump_files/widgets.js" id="twitter-wjs"></script>
-
   <script type="text/javascript" src="Box_Jump_files/phaser113.js"></script>
   <script type="text/javascript" src="Box_Jump_files/load.js"></script>
   <script type="text/javascript" src="Box_Jump_files/play.js"></script>
   <script type="text/javascript" src="Box_Jump_files/end.js"></script>
   <script type="text/javascript" src="Box_Jump_files/game.js"></script>
-<script src="Box_Jump_files/embed.js" async="" type="text/javascript"></script>
-<script src="Box_Jump_files/service.js" data-requiremodule="8dc42610-ae42-4164-90b1-573478b46574/service" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script>
+<!--script src="Box_Jump_files/embed.js" async="" type="text/javascript"></script-->
+<!--script src="Box_Jump_files/service.js" data-requiremodule="8dc42610-ae42-4164-90b1-573478b46574/service" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script-->
 <script charset="UTF-8" async="" src="Box_Jump_files/alfie.js"></script></head>
 
 <body data-twttr-rendered="true">
@@ -32,12 +30,22 @@
 	</div>
 
 </form>
-  <h2 class="game_title">Game #3 of my "one game per week" challenge: Box Jump</h2>
+  <h2 class="game_title">Little Wing Studio | Box Jump</h2>
 
-  <div id="gameContainer" style="width: 600px; overflow: hidden;"> <canvas style="display: block; cursor: default;" height="200" width="600"></canvas></div>
+  <div id="gameContainer" style="width: 600px; overflow: hidden;"> 
+    <canvas style="display: block; cursor: default;" height="200" width="600"></canvas>
+  </div>
 
   <script type="text/javascript">
-    var disqus_identifier = 'game_3';
+  (function() {
+    var can = document.getElementById('gameContainer');
+    var gameCanvas = can.getElementsByTagName('canvas');
+    // console.log(can.style);
+    console.log(gameCanvas);
+    console.dir(gameCanvas['0']);
+    // gameCanvas.style.backgroundColor = "#acdcac";
+    // gameCanvas.style.backgroundImage = "url('./images/ocean_bg.jpg')";
+  })();
   </script>
 
     </div>	<div id="footer">
