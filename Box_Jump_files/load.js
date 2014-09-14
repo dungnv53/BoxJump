@@ -14,7 +14,7 @@ Game.Load = function (game) {
 Game.Load.prototype = {
 	preload: function () {
 	    game.stage.backgroundColor = '#669999';
-	    // game.load.image("background",'./images/bg2.jpg');
+	    game.load.image("background",'./images/bg2.jpg');
 	    label1 = game.add.text(Math.floor(w/2), Math.floor(h/2)-20, 'Box Jump', { font: '30px Arial', fill: '#fff' });
 	    label2 = game.add.text(Math.floor(w/2)+0.5, Math.floor(h/2)+20+0.5, 'loading...', { font: '16px Arial', fill: '#fff' });
 		label1.anchor.setTo(0.5, 0.5);
@@ -29,9 +29,10 @@ Game.Load.prototype = {
 		game.load.image('pixel', 'images/pixel.png');
 		game.load.audio('hit', 'sounds/hit.wav');
 		game.load.audio('jump', 'sounds/jump.wav');
-		game.load.audio('music', 'sounds/music.wav');
+		game.load.audio('music', 'sounds/music_loud.wav');
 	},
 	create: function () {
+		// background = game.add.tileSprite(0, 0, 600, 200, "background");
 		game.state.start('Play');
 	}
 };

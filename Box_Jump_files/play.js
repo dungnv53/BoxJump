@@ -80,6 +80,15 @@ Game.Play.prototype = {
 	        }
 	    }
 
+	    if(game.input.pointer1.isDown  && this.player.body.touching.down) {
+	    	this.playerJump();
+	        if (this.start == 0) {
+	        	this.start = 1;
+	        	this.player.body.velocity.x = 170;
+	        	game.add.audio('music').play('', 0, 0.1, true);
+	        }
+	    }
+
 	    if (this.player.body.touching.down && this.start == 1) { 
 	    	this.player.alive = true;
 	    	this.player.body.velocity.x = 170;
