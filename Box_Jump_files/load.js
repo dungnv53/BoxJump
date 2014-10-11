@@ -29,7 +29,7 @@ Game.Load.prototype = {
 		game.load.image('pixel', 'images/pixel.png');
 		game.load.audio('hit', 'sounds/hit.wav');
 		game.load.audio('jump', 'sounds/jump.wav');
-		game.load.audio('music', 'sounds/music_loud.wav');
+		game.load.audio('music', 'sounds/music.wav');
 	},
 	create: function () {
 		// background = game.add.tileSprite(0, 0, 600, 200, "background");
